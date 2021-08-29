@@ -1,0 +1,19 @@
+{
+  "name": "api_site_frutas",
+  "version": "1.0.0",
+  "description": "Api para o site de frutas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/index"
+  },
+  "author": "Diego Santos Rodrigues",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.3.0"
+  }
+}
