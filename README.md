@@ -107,3 +107,8 @@ Exibindo resultado
 - WORDIR= onde está localizada a aplicação
 - CMD= comando a ser executado assim que o container subir
 <br><br>
+
+# Imagens Docker Utilizadas
+- https://hub.docker.com/_/mysql
+- https://hub.docker.com/_/node
+- https://hub.docker.com/_/php
