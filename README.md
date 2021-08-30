@@ -48,7 +48,7 @@ Case utilizando containers distintos para Node, Mysql e PHP
     </code>
 <br><br>
 
-# node
+# node (api)
 
 ## comandos
 > sudo apt install npm <br>
@@ -63,8 +63,21 @@ Executar o comando na raiz do projeto
 Rodando imagem dentro de um container
 > docker run -d -v $(pwd)/api:/home/node/app -p 9001:9001 --link mysql-container --rm --name node-container node-image
 
+Exibindo resultado
+> acessar localhost:9001
 ## glossário node
 - nodemon: manterá o node rodando e o atualizará sempre que houver alteração no javascript
+
+# php (website)
+
+## comandos
+Na raix do projeto (acima da pasta website) rodar:
+> docker build -t php-image -f website/Dockerfile 
+
+> docker run -d -v $(pwd)/website:/var/www/html -p 8888:80 --link node-container --rm --name php-container php-image .
+
+Exibindo resultado
+> acessar localhost:8888
 
 # recomendações de extensões vscode
 - gitlens vscode
@@ -74,6 +87,9 @@ Rodando imagem dentro de um container
 - node require
 - express snippets
 <br><br>
+
+# recomendações de extensões chrome
+- JSON Viewer: https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh/related?hl=pt-BR
 
 # glossário docker
 - -t: tag = Nome da imagem local para identificá-la
