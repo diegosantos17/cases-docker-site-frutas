@@ -112,3 +112,18 @@ Exibindo resultado
 - https://hub.docker.com/_/mysql
 - https://hub.docker.com/_/node
 - https://hub.docker.com/_/php
+
+# Dockercompose
+- podemos, ou não, usar um Dockerfile
+- volumes = mapeamento que substituí -v no docker run
+- build = Se usarmos o Dockerfile (com esse nome), não precisamos mencionar o comaminho completo com o nome, do contrário sim.
+- Se o nome do arquivo não for docker file, teria que usar<br>
+    <pre>
+        api:
+            build:
+                context: "./api"
+                dockerfile: "Dockerfile-XPTO
+
+    </pre>
+- restart = caso o container caia, ele será reiniciado automáticamente 
+
